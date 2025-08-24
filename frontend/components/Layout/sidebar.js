@@ -45,7 +45,7 @@ export default function Sidebar({ isOpen, setIsOpen }) {
       <style jsx>{`
         .sidebar {
           width: var(--sidebar-width);
-          background: linear-gradient(180deg, var(--primary) 10%, var(--secondary) 100%);
+          background: black;
           color: white;
           position: fixed;
           height: 100vh;
