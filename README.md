@@ -251,12 +251,4 @@ mongo
 use mern_task_distribution
 db.dropDatabase()
 
-# Recreate admin user
-cd backend
-node createAdmin.js
-🤝 Contributing
-Fork the repository
-Create a feature branch (git checkout -b feature/amazing-feature)
-Commit your changes (git commit -m 'Add some amazing feature')
-Push to the branch (git push origin feature/amazing-feature)
-Open a Pull Request
+s
