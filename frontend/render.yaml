@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: task-distribution-frontend
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: .next
+    envVars:
+      - key: BACKEND_URL
+        value: https://task-distribution-backend.onrender.com
+      - key: NEXT_PUBLIC_API_URL
+        value: https://task-distribution-backend.onrender.com/api

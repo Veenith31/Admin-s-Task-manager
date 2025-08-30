@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: task-distribution-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: JWT_EXPIRE
+        value: 30d
+      - key: JWT_COOKIE_EXPIRE
+        value: 30
+      - key: ADMIN_NAME
+        value: Admin User
+      - key: ADMIN_EMAIL
+        value: admin@example.com
+      - key: ADMIN_PASSWORD
+        value: admin123

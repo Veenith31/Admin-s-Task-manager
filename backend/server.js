@@ -43,6 +43,17 @@ if (!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
 }
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'OK',
+    message: 'Task Distribution System Backend is running',
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development',
+    version: '1.0.0'
+  });
+});
+
 // Mount routers
 app.use('/api/auth', authRoutes);
 app.use('/api/agents', agentRoutes);
